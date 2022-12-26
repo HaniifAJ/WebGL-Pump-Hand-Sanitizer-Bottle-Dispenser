@@ -31,24 +31,23 @@ function main(){
     vertices.push(...tube)
     colors.push(...tubeC)
     indices.push(...tubeI);
-    [tube2, tube2C, tube2I] = getArray(0.03, 0.03, 0.55, 0.4, segment, 0.5, 0.5, 0.5, 0.7, 0.7, 0.7, vertices.length/3);
-    vertices.push(...tube2)
-    colors.push(...tube2C)
-    indices.push(...tube2I);
-
-    //tube diameter kecil yang seperti selang/saluran
     [tube3, tube3C, tube3I] = getArray(0.05, 0.05, 0.45, 0.4, segment, 0.5, 0.5, 0.5, 0.7, 0.7, 0.7, vertices.length/3);
     vertices.push(...tube3)
     colors.push(...tube3C)
     indices.push(...tube3I);
+
+    //tube diameter kecil yang seperti selang/saluran
+    [tube2, tube2C, tube2I] = getArray(0.03, 0.03, 0.55, 0.4, segment, 0.5, 0.5, 0.5, 0.7, 0.7, 0.7, vertices.length/3);
+    vertices.push(...tube2)
+    colors.push(...tube2C)
+    indices.push(...tube2I);
+    
 
     //silinder lingkaran tipis untuk tempat menekan
     [tube4, tube4C, tube4I] = getArray(0.08, 0.08, 0.6, 0.55, segment, 0.5, 0.5, 0.5, 0.7, 0.7, 0.7, vertices.length/3);
     vertices.push(...tube4)
     colors.push(...tube4C)
     indices.push(...tube4I);
-    console.log(indices);
-    console.log(vertices);
 
     let iStart = vertices.length/3;
 
@@ -70,6 +69,11 @@ function main(){
         iStart,iStart+3,iStart+7,   iStart+7,iStart+4,iStart,
         // iStart+2,iStart+3,iStart+7, iStart+7,iStart+6,iStart+2, //sisi keluarnya cairan handsanitizer
     );
+
+    console.log("indices: ");
+    console.log(indices);
+    console.log("vertices: ");
+    console.log(vertices);
 
 
     //vertex buffer

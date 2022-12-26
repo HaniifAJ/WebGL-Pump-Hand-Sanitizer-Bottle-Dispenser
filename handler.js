@@ -1,3 +1,13 @@
+// Membuat array vertices (arr), colors, dan indices untuk sebuah silinder dengan:
+// + topRadius: Jari-jari atas
+// + botRadius: Jari-jari bawah
+// + topH: Posisi Y dari permukaan lingkaran atas silinder
+// + botH: Posisi Y dari permukaan lingkaran bawah silinder
+// + segment: Jumlah segmen poligon silinder, semakin banyak -> semakin smooth lingkarannya
+// + r, g, b : Warna silinder di permukaan bawah
+// + r2, g2, b2 : Warna silinder di permukaan atas
+// + indicesStart: Nilai start indice, bergantung pada array vertices yang sudah ada
+// Return array vertices (arr), colors, dan indices
 function getArray(topRadius, botRadius, topH, botH, segment, r, g, b, r2, g2, b2, indiceStart = 0){
     let colors = []
     let arr = []
